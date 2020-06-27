@@ -1,0 +1,46 @@
+    <header>
+      <div class="container">
+        <img
+          routerLink="/home"
+          src="../../assets/logo.png"
+          alt="Logo"
+        />
+        <div class="menu-section">
+          <div class="menu-toggle">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+          </div>
+          <nav>
+            <ul>
+              <li>
+                <a routerLink="/home">Home</a>
+              </li>
+              <li>
+                <a routerLink="/login">Login</a>
+              </li>
+              <li>
+                <a routerLink="/register">Cadastrar</a>
+              </li>
+              <!-- <li>
+                <a routerLink="/dividas">Dividas</a>
+              </li> -->
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+     <script>
+		let show = true;
+
+		const menuSection = document.querySelector(".menu-section")
+		const menuToggle = menuSection.querySelector(".menu-toggle")
+
+		menuToggle.addEventListener("click", () => {
+		  //se o botao for pressionado (show=true) vai dar um overflow hidden (não deixa rolar a pagina). Caso contrario, deixa o padrão pra rolagem initial.
+			document.body.style.overflow = show ? "hidden" : "initial"
+
+			menuSection.classList.toggle("on", show)
+			show = !show;
+		})
+	</script>

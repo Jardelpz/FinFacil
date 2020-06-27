@@ -1,0 +1,39 @@
+<router-outlet></router-outlet>
+<form class="form" method="post">
+    <h1>Cadastro</h1>
+
+    <div class="inputs">
+        <input type="text" name="name" [(ngModel)]="user.name" required placeholder="Nome"/>
+    </div>
+    <div class="inputs">
+      <input type="email" #email id="email" name="email" [(ngModel)]="user.email" required placeholder="Email"/>
+    </div>
+    <div class="inputs">
+        <input type="text" name="cpf" [(ngModel)]="user.cpf" required  placeholder="CPF"/>
+    </div>
+    <div class="inputs">
+        <input type="number" name="renda" [(ngModel)]="user.renda" required placeholder="Renda Mensal"/>
+    </div>
+    <div class="inputs">
+        <input type="number" name="economiza" [(ngModel)]="user.economiza" required  placeholder="Valor em % para guardar"/>
+    </div>
+    <div class="inputs">
+        <input type="password" name="senha" [(ngModel)]="user.senha" required  placeholder="Senha"/>
+    </div>
+
+    <button type="button"  class="botao" [routerLink]="['/dividas', email.value]" (click)="addUser()">Cadastrar</button>
+
+  </form>
+  <script>
+      $(".inputs input").on("focus", function(){
+      $(this).addClass("focus");
+      });
+
+      $(".inputs input").on("blur", function(){
+          if((this).value == ""){
+              $(this).removeClass("focus");
+          }
+      });
+
+  </script>
+

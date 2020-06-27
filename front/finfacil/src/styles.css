@@ -1,0 +1,32 @@
+/* BASE */
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+    background-color: #E1C2BB;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 28px;
+}

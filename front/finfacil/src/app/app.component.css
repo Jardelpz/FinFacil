@@ -1,0 +1,28 @@
+
+.index {
+
+    width: 35%;
+    margin: 0 auto;
+    min-width: 500px;
+    margin-top: 200px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #9A5D50;
+    border-radius: 10px;
+    padding: 20px
+    
+}
+
+
+.index__title {
+    font-family: sans-serif;
+    font-size: 2rem;
+}
+
+nav a:visited, a:link, a:active, a:hover, a{
+    color: rgb(106, 182, 135);
+    text-decoration: none;
+}
+

@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+
+
+*{
+    padding: 0 22px;
+}
+
+.content {
+    margin: auto;
+    width: 40%;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+form p, button {
+    font-size: 1.5rem;
+    font-family: "Source Sans Pro";
+}
+
+
+.input {
+    border-bottom: 1px solid #808080;
+    position: relative;
+    margin: 20px 0;
+}
+
+
+.input input {
+    width: 100%;
+    height: 25px;
+    border: none;
+    font-size: 15px;
+    outline: none;
+    background: none;
+    padding: 0 8px;
+    font-family: "Source Sans Pro";
+    font-size: 1.2rem;
+  }
+  
+  .input span::before {
+    content: attr(data-placeholder);
+    position: absolute;
+    color:#808080;
+    left: 8px;
+    z-index: -1;
+    transition: .4s;
+    top:-2px;
+  }
+
+.content input{
+    margin-bottom: 1.5rem;
+}
+
+.content--valor{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-family: "Source Sans Pro";
+}
+
+.content--p{
+    margin-bottom: 2rem;
+    font-family: "Source Sans Pro";
+}
+
+.btn-pagar{
+    background-color: rgba(148, 127, 167, 0.623);
+    border-radius: 10px;
+    border: 1px solid  rgba(67, 34, 97, 0.623);
+    font-family: "Source Sans Pro";
+    font-size: 20px;
+}
+
+.btn-pagar:hover{
+    background-color: rgba(67, 18, 110, 0.623);
+}
