@@ -1,0 +1,31 @@
+    <form class="form" method="post">
+      <h1>Login</h1>
+
+      <div class="inputs">
+        <input type="email" #email [(ngModel)]="user.email" name="email" placeholder="Email"/>
+      </div>
+
+      <div class="inputs">
+        <input type="password" [(ngModel)]="user.senha" name="senha" placeholder="Senha"/>
+      </div>
+
+      <button type="button" [routerLink]="['/dividas', email.value]" class="botao" (click)="verificaLogin()">Cadastrar</button>
+    
+      <!-- <div class="cadastrar">
+        Não cadastrado? <a href="login.html">Cadastre-se</a>
+      </div> -->
+
+    </form>
+    <!-- <script>
+        $(".inputs input").on("focus", function(){
+        $(this).addClass("focus");
+        });
+
+        $(".inputs input").on("blur", function(){
+            if((this).value == ""){
+                $(this).removeClass("focus");
+            }
+        });
+
+    </script> -->
+  

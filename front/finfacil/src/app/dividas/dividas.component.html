@@ -1,0 +1,32 @@
+<div class="content">
+    <form>
+        <div class="input">
+            <input type="text" placeholder="Name" name="name" [(ngModel)]="divida.name" required/>
+        </div>
+        <div class="input">
+            <input type="date" placeholder="Data de Vencimento" name="data_vencimento" [(ngModel)]="divida.data_vencimento" required/>
+        </div>
+        <div class="input">
+            <input type="number" placeholder="Preço" name="preco" [(ngModel)]="divida.preco" required/>
+        </div>
+            <button class="btn-pagar" type="button" (click)="addDivida()">Cadastrar</button>
+    </form>
+    <h2 class="content--valor">Valor das Dívidas no mês: {{total}}</h2>
+    <p class="content--p"> {{msg}} </p>
+    
+    <table class="table">
+        <tr>
+            <th>Nome</th>
+            <th>Data Vencimento</th>
+            <th>Preço</th>
+            <th>Pagar</th>
+        </tr>
+
+        <tr *ngFor="let d of dividas">
+            <td>{{d.name}}</td>
+            <td>{{d.data_vencimento}}</td>
+            <td>{{d.preco}}</td>
+            <td><button class="btn-pagar" (click)="pagarDivida(d.id)">Pagar</button></td>
+        </tr>
+    </table>
+</div>

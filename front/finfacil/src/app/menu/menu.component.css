@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+html {
+  /* a cada 1rem será considerado 10px */
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100vh;
+  font-family: "Source Sans Pro";
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+header {
+  background-color: #7159c1;
+}
+
+header .container {/*fazer as bordas de cada lado da página para o conteúdo*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 980px;
+  margin: auto;
+}
+
+header img {
+  width: 100px;
+  margin-left: 20px;
+  padding: 15px 0;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  padding: 0 2.4rem;
+  transition: all 250ms linear 0s;/*deixa o hover lento e mais bonito*/
+}
+
+header nav ul li a:hover {
+  background: rgba(255,255,255, 0.15)
+}
+
+
+/* RESPONSIVE */
+
+html {
+    font-size: 50%;
+}
+
+@media (max-width: 768px) {
+  html{
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 640px) {
+  html{
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 580px) {
+    nav {
+        display: none;
+    }
+      /*sanduiche menu*/
+    .one,
+    .two,
+    .three {
+        background-color: #fff;
+        height: 5px;
+        width: 100%;
+        margin: 6px auto;
+        transition-duration: 0.8s;
+    }
+
+    .menu-toggle {
+        width: 40px;
+        height: 30px;
+        margin-right: 20px;
+    }
+
+    /* fullscreen */
+    .menu-section.on {
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #7159c1;
+
+        z-index: 10;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition-duration: 0.8s;
+        transition-timing-function: ease-in-out;/*é o movimento do objeto*/
+    }
+
+    .menu-section.on nav {
+        display: block;
+        transition-delay: 0.5s;
+    }
+
+    /*posição do x*/
+    .menu-section.on .menu-toggle {
+        position: absolute;
+        right: 25px;
+        top: 15px;
+    }
+
+    .menu-section.on .menu-toggle .one {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .menu-section.on .menu-toggle .two {
+        opacity: 0;
+    }
+
+    .menu-section.on .menu-toggle .three {
+        transform: rotate(-45deg) translate(8px, -9px);
+    }
+
+    .menu-section.on nav ul {
+        text-align: center;
+        display: block; /*para nao deixar um do lado outro outro, para quebra a linha*/
+    }
+
+    .menu-section.on nav ul a{
+        transition-duration: 0.5s;
+        font-size: 3rem;
+        line-height: 4rem;
+        display: block;
+    }
+
+}
+
+@media (max-width: 320px) {
+
+}
